@@ -31,14 +31,14 @@ class Player:
         #update the board with the initial positions
         self.board.update_board(self.name, self.x, self.y)
         
-    def move(self, direction):
-        """ Validate the player direction and use the board instance to validate the move target.
+    def move(self, direction): # Validate the player direction, use board instance to validate the move target.
+        """ Validate the player direction and also use the board instance to validate the move target.
 
 		parameters:
-		direction - direction of the player's move
+		direction - The direction of the player's move
 
 		returns:
-		the move target validation result - True for non-suicidal move, False for a move resulting in the end of the game
+		the move target validation result - True for a non-suicidal move, False for a move that results in the end of the game
 		the validation result information message """        
 		# store potential new position (not validated yet)
         
