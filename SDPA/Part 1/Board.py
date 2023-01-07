@@ -31,16 +31,39 @@ class Board:
     def __str__(self):
         
         """ print the Board class instance current state but using the board grids variable. """
-        s=""
+        k=""
         
-        s+="-" * (self.size * 2 + 1)+"\n"
+        k+="-" * (self.size * 2 + 1)+"\n"
         
         for row in self.grid:
             
-            s+="|" + ("|".join(str(x) for x in row) + "|")+"\n"  
+            k+="|" + ("|".join(str(x) for x in row) + "|")+"\n"  
             
-        s+="-" * (self.size * 2 + 1)+"\n"
+        k+="-" * (self.size * 2 + 1)+"\n"
         
-        return s
+        return k
 
-    
+    def update_board(self, value, x, y):
+        """ place the line or player on the board game.
+
+		parameters:
+		value - the current player, which could be the players new position or the players line
+		x - Row location on the board game to place the player
+		y - Column position on the board to place the player """
+
+
+    def is_valid_move(self, player_name, target_row, target_col):
+        """ validate the current player's move.
+
+        A valid move will cause the board being re-printed
+        In simultaneous mode, print the board but only if both of the players have chosen to move
+
+		parameters:
+        target_row1 - Players row position located on the board
+        target_col1 - Players column location on the board
+        Players_name - Players name
+		
+		
+		returns:
+		the validation result - True for a valid move, False for an invalid move
+		 """
