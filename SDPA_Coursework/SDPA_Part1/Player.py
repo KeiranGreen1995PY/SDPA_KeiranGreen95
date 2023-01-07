@@ -13,7 +13,7 @@ Created on Sat Jan  7 16:19:06 2023
 from Board import Board # Import the board class to player class
 
 class Player:
-    def __init__ (self, name, x, y, Board): # Initialise the attributes of the class with the players name, starting location and board instance
+    def __init__ (self, name, score, x, y, Board): # Initialise the attributes of the class with the players name, starting location and board instance
         """ initialise the Player instance with the players name, start position and board instance.
 
 		parameters:
@@ -25,11 +25,13 @@ class Player:
 		return the initialized Player instance """
 		
         self.name = name #represent instance name of the player class
+        self.score = score #represent instance score of the player class
         self.y = y #represent instance y of the player class
         self.x = x #represent instance x of the player class
         self.Board = Board #represent instance board of the player class
+       
         #update the board with the initial positions
-        self.board.update_board(self.name, self.x, self.y)
+        self.board.update_board(self.name, self.score, self.x, self.y)
         
     def move(self, direction): # Validate the player direction, use board instance to validate the move target.
         """ Validate the player direction and also use the board instance to validate the move target.
