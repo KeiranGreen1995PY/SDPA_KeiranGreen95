@@ -11,7 +11,7 @@ Created on Sat Jan  7 16:19:04 2023
 # It will present the game menu which allows for various game options.
 
 from Board import Board # Imports the Board classes
-from Player import player # Imports the Player classes
+from Player import Player # Imports the Player classes
 
 
 while (True): # Creates a loop for the dots & boxes main game menu
@@ -36,10 +36,10 @@ while (True): # Creates a loop for the dots & boxes main game menu
     
     #create two objects of the player class
     # set the starting position for the players  (this can be an input too)
-    player1 = player ("1", 0, 0, dots_boxes_board)
+    player1 = Player ("1", 0, 0, dots_boxes_board)
         
     # set the starting position for the player two at the right bottom corner 
-    player2 = player ("2", boardgame_size - 1, boardgame_size - 1, dots_boxes_board)
+    player2 = Player ("2", boardgame_size - 1, boardgame_size - 1, dots_boxes_board)
     
     # print the board game start state with the 2 players in their initial positions
     print(dots_boxes_board)
@@ -51,8 +51,8 @@ while (True): # Creates a loop for the dots & boxes main game menu
            # Get the player's move from the user
            move= ""
            while move not in ["l","r","u", "d"]: 
-                 move = input(f'{player.name} - enter your move (u, d, l, r): ')
-           valid_move= player.move(move)
+                 move = input(f'{Player.name} - enter your move (u, d, l, r): ')
+           valid_move= Player.move(move)
            if valid_move == False:
                 break
    

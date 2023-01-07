@@ -10,7 +10,7 @@ Created on Sat Jan  7 16:19:06 2023
 ### These classes get or generate a players move. 
 # They make use of the Board class instance to validate and plot their move
 
-from Board import board # Import the board class to player class
+from Board import Board # Import the board class to player class
 
 class Player:
     def __init__ (self, name, x, y, Board): # Initialise the attributes of the class with the players name, starting location and board instance
@@ -27,7 +27,7 @@ class Player:
         self.name = name #represent instance name of the player class
         self.y = y #represent instance y of the player class
         self.x = x #represent instance x of the player class
-        self.board = board #represent instance board of the player class
+        self.Board = Board #represent instance board of the player class
         #update the board with the initial positions
         self.board.update_board(self.name, self.x, self.y)
         
