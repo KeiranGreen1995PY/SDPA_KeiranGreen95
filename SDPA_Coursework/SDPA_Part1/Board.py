@@ -5,9 +5,9 @@ Created on Sat Jan  7 15:05:40 2023
 @author: judit
 """
 
-# Part 1 SDPA Coursework (Dots & Boxes Game)
+### Part 1 SDPA Coursework (Dots & Boxes Game) Board Class
 
-# This python file Board.py contains the board class for the text-based dots and boxes game
+### This python file Board.py contains the board class for the text-based dots and boxes game
 
 class Board:
     """ Confirm the player move, plot the player paths and then print the board #
@@ -65,5 +65,5 @@ class Board:
 		
 		
 		returns:
-		the validation result - True for a valid move, False for an invalid move
+		the validation result - It is True for a valid move, and it is False for an invalid move
 		 """
