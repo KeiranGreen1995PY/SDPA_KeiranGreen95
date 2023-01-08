@@ -10,8 +10,9 @@ Created on Sat Jan  7 16:19:04 2023
 # which imports and also makes use of the Board and Player classes. 
 # It will present the game menu which allows for various game options.
 
-from Board import Board # Imports the Board classes
-from Player import Player # Imports the Player classes
+from Board import Board # Imports the Board class
+from Player import Player # Imports the Player class
+from ComputerPlayer import ComputerPlayer # Imports the ComputerPlayer Class
 
 def main(): 
 
@@ -30,13 +31,25 @@ def main():
         print(f"{players[Current_player].name}'s turn")
         row = int(input("Enter the row: "))
         col = int(input("Enter the column: "))
-        horizontal = input("Enter H for the Horizontal line, V for vertical:
-                           ".upper() == "H"
+        horizontal = input("Enter H for the Horizontal line, V for vertical: ").upper() == "H"
         
-        if not board.draw_line(row, col, horizontal)
+        if not board.draw_line(player1, row1, col1, horizontal1)
         print("Thats not a valid movement, please try that again")
         continue
-        board.draw_board()
+        row2, col2, horizontal2 = player2.get_random_move()
+        if not board.draw_line(player2, row2, col2, horiontal2):
+        print("Thats not a valid movement , please try that again")
+        continue
+        if row1 == row2 and col1 == col2 and horizontal1 == horizontal2:
+            if board.check_box(player1, row1, col1):
+                player1.add_point()
+                player2.add_point()
+                print(f"{player1.name} and {player2.name} will receive a point, they have completed a box")
+            else:
+                print("There was a confliction, enter different moves")
+                continue
+            
+            board.draw_board()
         if board.check_box(row, col):
         print(f"{player.name} has completed a box")
         player[Current_player].add_point()
