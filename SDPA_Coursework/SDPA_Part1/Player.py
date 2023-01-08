@@ -13,22 +13,14 @@ Created on Sat Jan  7 16:19:06 2023
 from Board import Board # Import the board class to player class
 
 class Player:
+    
     def __init__ (self, name, score, x, y, board): # Initialise the attributes of the class with the players name, starting location and board instance
-        """ initialise the Player instance with the players name, start position and board instance.
-
-		parameters:
-		name - player name. Used a the players board character
-		x- player start row position on the board
-		y - player start column position on the board
-		board - instance of the board class. This will be used to invoke Board methods
-
-		return the initialized Player instance """
-		
-        self.name = name #represent instance name of the player class
-        self.score = score #represent instance score of the player class
-        self.y = y #represent instance y of the player class
-        self.x = x #represent instance x of the player class
-        self.Board = Board #represent instance board of the player class
+        
+        self.name = name #Create attribute of the class player which is name
+        self.score = score #Create attribute of the class player which is score
+        self.y = y #Create attribute of the class player which is Y
+        self.x = x #Create attribute of the class player which is x
+        self.Board = Board #Create attribute of the class player which is Board
        
         #update the board with the initial positions
         self.board.update_board(self.name, self.score, self.x, self.y)
