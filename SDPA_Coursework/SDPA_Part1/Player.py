@@ -20,9 +20,9 @@ class Player:
         self.score = 0 #Create attribute of the class player which is score
         self.y = y #Create attribute of the class player which is Y
         self.x = x #Create attribute of the class player which is x
-        self.Board = Board #Create attribute of the class player which is Board
+        self.board = board #Create attribute of the class player which is Board
        
-    def Add_Point(self):
+    def add_point(self):
         self.score =+1
             
         #update the board with the initial positions
