@@ -13,7 +13,7 @@ Created on Sat Jan  7 16:19:06 2023
 from Board import Board # Import the board class to player class
 
 class Player:
-    def __init__ (self, name, score, x, y, Board): # Initialise the attributes of the class with the players name, starting location and board instance
+    def __init__ (self, name, score, x, y, board): # Initialise the attributes of the class with the players name, starting location and board instance
         """ initialise the Player instance with the players name, start position and board instance.
 
 		parameters:
