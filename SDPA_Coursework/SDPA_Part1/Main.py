@@ -13,52 +13,27 @@ Created on Sat Jan  7 16:19:04 2023
 from Board import Board # Imports the Board classes
 from Player import Player # Imports the Player classes
 
+rows = int(input("Enter the number of rows: "))
+cols = int(input("Enter the number of columns: "))
 
-while (True): # Creates a loop for the dots & boxes main game menu
+player1 = Player(input("Enter the name for player1: "))
+player2 = Player(input("Enter the name for player2: "))
 
-	
-    while True: # Board size input & validation loop
-        try:
-			# From the user input this captures the board size for the game 
-            boardgame_size = int(input ("Input board size (greater than 3): "))
-            if boardgame_size <= 3:
-                print ("Board size must be bigger than 3")
-            else:
-				# break out of the board size input and validation loop
-                break
-        except ValueError:
-            print("Please enter a valid number.")
-		
-		# return to the board size input and validation loop
-   
-    # initialise the board instance with the size
-    dots_boxes_board = Board(boardgame_size)
-    
-    #create two objects of the player class
-    # set the starting position for the players  (this can be an input too)
-    player1 = Player ("1", 0, 0, dots_boxes_board)
+Current_player = 0
+while true:
         
-    # set the starting position for the player two at the right bottom corner 
-    player2 = Player ("2", boardgame_size - 1, boardgame_size - 1, dots_boxes_board)
-    
-    # print the board game start state with the 2 players in their initial positions
-    print(dots_boxes_board)
-
-    # game play loop
-    valid_move= True
-    while(valid_move):
-        for Player in [player1, player2]:
-           # Get the player's move from the user
-           move= ""
-           while move not in ["l","r","u", "d"]: 
-                 move = input(f'{Player.name} - enter your move (u, d, l, r): ')
-           valid_move= Player.move(move)
-           if valid_move == False:
-                break
-   
-    
-   # Break if not playing again
-    play_again = input ("Would you like to pay again? (y or n): ")
-    if(play_again.lower()!='y' and play_again.lower()!='yes' ): 
-        print ("Thanks for playing, end of the game")
-        break
+    print(f{"players[Current_player].name}'s turn")
+    row = int(input("Enter the row: "))
+    col = int(input("Enter the column: "))
+    horizontal = input("Enter H for the Horizontal line, V for vertical:").upper() == "H"
+        
+    board.draw_line(row, col, horizontal)
+    board.draw_board()
+if  board.check_box(row, col):
+    player[Current_player].add_point()
+    print(f"{players[Current_player].name} will receive a point!")
+    Current_player = (Current_player + 1) % 2
+        
+if __name__ == "__main__":
+    main()
+        
