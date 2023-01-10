@@ -1,5 +1,11 @@
 # SDPA_KeiranGreen95
 
+
+GitHub Repository Link "https://github.com/KeiranGreen1995PY/SDPA_KeiranGreen95.git"
+I have added SDPA-UoB as a collaborator. 
+
+Dots & Boxes object-orientated programme description 
+
 I decided to create a dots and boxes game using an object-orientated programming approach in python Spyder IDE. I created two classes, the first is a player class, and the second is a board class. I created a main script that imports the board, and player and then later added the computer player class to run the classes I implemented. The player class contains attributes such as name, score, x location, y location, and the board. The board class includes a grid containing dots and methods for drawing the necessary lines between the dots. However, then check if player 1, player 2, or the computer player has completed a box. The main loop is added to alternate between players 1, and 2 and the computer player until the game has been completed.
 
 In player class, the add point method is used to increment the score of the player by 1 updating the board with the updated score and player position. The computer player class is a subclass of the player class overriding the add point method. the add point method first increments the score calling the drawn line and updating board methods from the board class passing in a row, col, and horizontal as arguments. They get random move returns and random row and column index for the computer player to relocate to. In the board class, the init method is used to initialise the rows, cols, and players attributes of the board instance. Moreover, it will create a 2d grid of zeros row number of rows, and col number of columns. I have also added a dictionary of player positions to map the player names to their position on the board. 
