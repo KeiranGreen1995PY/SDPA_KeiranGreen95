@@ -2,7 +2,7 @@
 
 
 GitHub Repository Link "https://github.com/KeiranGreen1995PY/SDPA_KeiranGreen95.git"
-I have added SDPA-UoB as a collaborator
+I have added SDPA-UoB as a collaborator. 
 
 Dots & Boxes object-orientated programme description 
 
